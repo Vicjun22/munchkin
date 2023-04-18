@@ -1,0 +1,26 @@
+.background-com-sol, .background-com-pouco-sol, .background-sem-sol {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.background-com-sol {
+    background-image: url('./assets/backgrounds/background-day.svg');
+}
+
+.background-com-pouco-sol {
+    background-image: url('./assets/backgrounds/background-twilight.svg');
+}
+
+.background-sem-sol {
+    background-image: url('./assets/backgrounds/background-night.svg');
+}

@@ -1,0 +1,24 @@
+{
+  "name": "munchkin",
+  "version": "1.0.0",
+  "description": "Aplicação WEB com o intuito de auxiliar na contagem de pontuação e dinheiro do jogo Munchkin.",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vicjun22/munchkin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vicjun22/munchkin/issues"
+  },
+  "homepage": "https://github.com/Vicjun22/munchkin#readme",
+  "devDependencies": {
+    "cypress": "^12.9.0"
+  }
+}

@@ -1,0 +1,43 @@
+.title_content {
+    width: 100%;
+    height: 5%;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: 42px;
+    font-weight: 500;
+    color: #FA8B17;
+}
+
+.title_img {
+    height: 60px;
+    width: 60px;
+    background-image: url('../../../assets/images/munchkin_avatar_white.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media screen and (max-width: 1160px) {
+    .title {
+        font-size: 36px;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .title {
+        font-size: 28px;
+        color: #491712;
+    }
+
+    .title_img {
+        background-image: url('../../../assets/images/munchkin_avatar_brown.svg');
+    }
+}

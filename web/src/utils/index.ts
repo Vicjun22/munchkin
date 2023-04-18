@@ -1,0 +1,1 @@
+export { verificaPeriodoAtualDoDia } from './periodoDoDia';

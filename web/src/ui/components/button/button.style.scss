@@ -1,0 +1,29 @@
+.botao {
+    width: 200px;
+    height: 60px;
+
+    cursor: pointer;
+
+    color: #faab00;
+    font-family: 'Windlass';
+    font-size: 24px;
+
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(180deg, #8B5033 0%, #8D5133 0.01%, #3D2221 100%);
+}
+
+.botao:hover:not(:disabled) {
+    filter: brightness(0.7);
+}
+
+.botao:disabled {
+    color: #ffffff50;
+}
+
+@media screen and (max-width: 1000px) {
+    .botao {
+        color: #FACC97;
+        background: #491712;
+    }
+}

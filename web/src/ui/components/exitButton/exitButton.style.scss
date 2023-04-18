@@ -1,0 +1,21 @@
+.exit_botao {
+    width: 120px;
+    height: 50px;
+
+    color: #faab00;
+    font-family: 'Windlass';
+    font-size: 18px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border: 2px solid #faab00;
+    border-radius: 5px;
+    background: linear-gradient(180deg, #8B5033 0%, #8D5133 0.01%, #3D2221 100%);
+}
+
+.exit_botao:hover {
+    filter: brightness(0.7);
+}
