@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Vicjun22.github.io/munchkin",
+  "homepage": "https://Vicjun22.github.io/munchkin/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
