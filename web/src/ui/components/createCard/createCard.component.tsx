@@ -1,7 +1,7 @@
 import './createCard.style.scss';
 
 import { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { NavigateFunction, useNavigate } from 'react-router-dom';
 
 import { Button } from "../button/button.component"
 import { MUNCHKIN, ROUTES } from '../../../constants';
@@ -9,22 +9,15 @@ import { MUNCHKIN, ROUTES } from '../../../constants';
 import FemaleAvatar from '../../../assets/images/munchkin_human-female.svg';
 import MaleAvatar from '../../../assets/images/munchkin_human-male.svg';
 
-export function CreateCard({ players, setPlayers, qtdPlayers }: any) {
+export function CreateCard({ players, setPlayers, qtdPlayers, setOpenModal }: any) {
     const [nomeJogador, setNomeJogador] = useState<string>('');
     const [genero, setGenero] = useState<string>('');
-    const navigate = useNavigate();
+    const navigate: NavigateFunction = useNavigate();
     const isDadosSuficientes: boolean = nomeJogador !== '' && genero !== '';
 
     function handleSetGender(event: any, gender: string) {
         event.preventDefault();
         gender !== genero && setGenero(gender);
-    }
-
-    function handleSair(event: any) {
-        event.preventDefault();
-        localStorage.setItem(MUNCHKIN, '');
-        setPlayers([]);
-        navigate(ROUTES.HOME_PAGE.path);
     }
 
     function handleSubmit(event: any) {
@@ -80,7 +73,7 @@ export function CreateCard({ players, setPlayers, qtdPlayers }: any) {
 
             <div className={'create-card_btn-container'}>
                 <Button
-                    onClick={(event) => handleSair(event)}
+                    onClick={() => setOpenModal(true)}
                     id={'cy_create-players-btn_sair'}
                 >
                     Sair

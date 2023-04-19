@@ -3,7 +3,7 @@ import './createPlayers.style.scss';
 import { useNavigate } from 'react-router';
 import { useEffect, useState } from 'react';
 
-import { Button, CreateCard, Title } from '../../components';
+import { Button, CreateCard, ExitModal, Title } from '../../components';
 import { MUNCHKIN, ROUTES } from '../../../constants';
 
 import FemaleAvatar from '../../../assets/images/human-female.svg';
@@ -12,13 +12,14 @@ import MaleAvatar from '../../../assets/images/human-male.svg';
 import type { PlayerType } from '../../../types';
 
 export function CreatePlayers({ players, setPlayers, qtdPlayers }: any) {
+    const [openModal, setOpenModal] = useState<boolean>(false);
 
     useEffect(() => {
         localStorage.setItem(MUNCHKIN, JSON.stringify(players));
     }, [players])
 
 
-    // const navigate = useNavigate();
+    // const navigate: NavigateFunction = useNavigate();
 
     // function handleSortearOrdem(event: any) {
     //     event.preventDefault();
@@ -78,6 +79,7 @@ export function CreatePlayers({ players, setPlayers, qtdPlayers }: any) {
                     players={players}
                     setPlayers={setPlayers}
                     qtdPlayers={qtdPlayers}
+                    setOpenModal={setOpenModal}
                 />
             </div>
 
@@ -89,6 +91,8 @@ export function CreatePlayers({ players, setPlayers, qtdPlayers }: any) {
                 /> */}
 
             </div>
+            
+            {openModal && <ExitModal setOpenModal={setOpenModal} />}
         </section>
 
 
