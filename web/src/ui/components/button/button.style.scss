@@ -14,7 +14,7 @@
 }
 
 .botao:hover:not(:disabled) {
-    filter: brightness(0.7);
+    animation: brightness 0.2s 1 linear forwards;
 }
 
 .botao:disabled {
@@ -25,5 +25,15 @@
     .botao {
         color: #FACC97;
         background: #491712;
+    }
+}
+
+@keyframes brightness {
+    0% {
+        filter: brightness(1);
+    }
+    
+      100% {
+        filter: brightness(0.7);
     }
 }

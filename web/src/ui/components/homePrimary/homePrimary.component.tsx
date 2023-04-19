@@ -1,11 +1,11 @@
-import { useNavigate } from 'react-router-dom';
+import { NavigateFunction, useNavigate } from 'react-router-dom';
 
 import { ROUTES } from "../../../constants";
 import { Button } from "../button/button.component";
 
 export function HomePrimary({ players, setNewGame, setButtonHovered }: any) {
     const isJogoIniciado: boolean = players?.every((player: any) => player?.nivel >= 1) || false;
-    const navigate = useNavigate();
+    const navigate: NavigateFunction = useNavigate();
 
     function handleContinuar(event: any) {
         event.preventDefault();
