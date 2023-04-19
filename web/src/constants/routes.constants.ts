@@ -1,6 +1,6 @@
 export const ROUTES: any = {
     HOME_PAGE: {
-        path: '/munchkin/*',
+        path: '/munchkin/',
         name: 'home_page',
     },
     PLAYERS_PAGE: {
