@@ -232,6 +232,17 @@ Os outros itens mágicos não podem ser usados a menos que estejam em jogo. Se e
 
 ### MALDIÇÕES
 
+Se forem compradas abertas, durante a fase "Abra Uma Porta", elas são aplicadas à pessoa que as tiver comprado.
+
+Se forem compradas fechadas ou adquiridas de alguma outra forma, elas podem ser usadas em QUALQUER jogador a QUALQUER momento. A qualquer momento, você entendeu? Reduzir as habilidades de alguém, no momento em que ele pensou que havia matado um monstro é muito divertido!
+
+Uma maldição afeta sua vítima imediatamente (se for capaz), depois é descartada.
+
+<i>Exceções:</i> A carta "Mudança de Sexo" impõe uma penalidade ao seu próximo combate e a carta "Galinha na Cabeça"  fica lá um turno atrás do outro... Você fica com essas cartas até se livrar da maldição.
+
+Se uma maldição puder ser aplicada a mais de um item, a vítima escolhe qual item será perdido ou amaldiçoado.
+
+Se uma maldição for aplicada a alguma coisa que você não tem, ignore-a. Se você, por exemplo, comprar a carta "Perca sua Armadura" e não estiver carregando uma armadura, a maldição não terá efeito e será descartada.
 
 <br>
 
@@ -243,25 +254,44 @@ Essas cartas podem ser baixadas na mesa assim que forem adquiridas ou a qualquer
 
 ### MESTIÇO E SUPER MUNCHKIN
 
+Essas cartas permitem que você tenha, respectivamente, duas raças e duas classes.
+
+Você pode baixar a carta Mestiço a qualquer momento em que houver uma carta de raça em jogo; você, então, será metade daquela raça e meio-humano. Você pode adicionar uma segunda raça no mesmo momento ou então depois, desde que você ainda tenha a carta Mestiço na mesa; você então, será (por exemplo) meio-Elfo e meio-Anão, e terá as vantagens e desvantagens de ambas as raças. Você perde a carta Mestiço a qualquer momento em que não tiver nenhuma carta de raça em jogo.
+
+Você pode baixar a carta Super Munchkin a qualquer momento em que tiver uma classe em jogo e uma segunda carta de classe pode acrescentar a ela. Você perde a carta Super Munchkin se perder qualquer uma das cartas de classe.
 
 <br>
 
 ## OUTRAS COISAS DO MUNCHKIN
 
+Haverá momentos em que será útil jogar uma Maldição ou um monstro contra você mesmo ou para "ajudar" outro jogador, de modo a custar-lhe um tesouro. Esse é o estilo do Munchkin. Use e abuse!
 
 <br>
 
 ### FAZENDO TROCAS
 
+Você pode trocar Itens (e nenhum outro tipo de carta) com os outros jogadores. Você só pode trocar itens que estiverem na mesa - nunca os que se encontram em sua mão. Você pode fazer trocas a qualquer momento exceto quando estiver num combate - na realidade, o melhor momento para se fazer uma troca é fora do seu turno. Qualquer item que você receber numa troca terá de ir direto para a mesa e você só poderá vendê-lo quando estiver no seu turno.
+
+Você também pode simplesmente distribuir seus itens sem pedir outros em troca, para (por exemplo) subornar outros jogadores - "Eu te dou minha Armadura Flamejante se você <i>não ajudar</i> o Zé a lutar contra aquele dragão!".
+
+Você pode mostrar todas as cartas da sua mão para os outros jogadores. Como se pudéssemos tentar impedí-lo...
 
 <br>
 
 ### INTERFERINDO NO COMBATE
 
+Você pode interferir nos combates dos outros de diversas maneiras:
+
+<i>Use uma carta instantânea</i>. Se você tiver uma poção, você pode ajudar alguém, usando-a contra o inimigo dele. Obviamente, você pode "errar o alvo" e acertar seu amigo com a poção, fazendo com que ela conte <i>contra</i> ele.
+
+<i>Use uma carta para ampliar um monstro</i>. São essas cartas que deixam os monstros reamente assustadores... e fazem com que eles dêem mais tesouros. Você pode usá-las tanto durante os seus combates quanto durante os combates dos outros jogadores.
+
+<i>Apunhale</i> um jogador <i>pelas Costas</i> durante o combate, se você for um Ladrão.
+
+<i>Amaldiçoe</i> os outros jogadores, se tiver uma carta de maldição.
 
 <br>
 
 ### DISPUTAS E CONTRADIÇÕES DE REGRAS
 
 Quando as cartas entrarem em conflito com as regras, siga as instruções das cartas. Quaisquer outras contradições devem ser resolvidas pelos jogadores com as vozes alteradas, sendo que cabe ao dono do jogo a última palavra.
-

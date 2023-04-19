@@ -1,10 +1,11 @@
 import './home.style.scss';
 
-import { Title, HomePrimary, HomeSecondary } from '../../components';
+import { Title, HomePrimary, HomeSecondary, ImagesHovered } from '../../components';
 import { useState } from 'react';
 
 export function Home({ players, setPlayers }: any) {
     const [newGame, setNewGame] = useState<boolean>(false);
+    const [buttonHoverd, setButtonHovered] = useState<string>('');
 
     return (
         <section className={'section_menu'}>
@@ -15,14 +16,22 @@ export function Home({ players, setPlayers }: any) {
                     ?
                     <HomePrimary
                         player={players}
-                        setNewGame={setNewGame} 
+                        setNewGame={setNewGame}
+                        setButtonHovered={setButtonHovered}
                     />
                     :
                     <HomeSecondary
                         setPlayers={setPlayers}
                         setNewGame={setNewGame}
+                        setButtonHovered={setButtonHovered}
                     />
                 }
+            </div>
+            
+            <div className={'section_menu_image'}>
+                <ImagesHovered
+                    buttonHoverd={buttonHoverd}
+                />
             </div>
         </section>
     )

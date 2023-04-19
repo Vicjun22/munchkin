@@ -38,6 +38,15 @@
             color: #FA8B17;
         }
     }
+
+    .section_menu_image {
+        width: 55%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -67,6 +76,10 @@
                 font-family: 'Comicsans';
                 color: #491712;
             }
+        }
+
+        .section_menu_image {
+            display: none;
         }
     }
 }
