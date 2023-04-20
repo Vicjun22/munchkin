@@ -2,9 +2,7 @@ export interface PlayerType {
     nome?: string;
     genero?: string;
     ordem: number;
-
     nivel?: number;
-    dinheiro?: number;
 
     duasRacas?: boolean;
     raca1?: string;

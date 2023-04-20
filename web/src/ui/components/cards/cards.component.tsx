@@ -8,15 +8,25 @@ export function Cards({ players, setPlayers, qtdPlayers }: any) {
     const gender: any = {
         feminino:   FemaleAvatar,
         masculino:  MaleAvatar
-  }
+    }
+
+    function handleDeletePlayer(event: any, cardNum: number) {
+        event.preventDefault();
+        qtdPlayers === 'um-jogador' 
+            ? setPlayers([]) 
+            : players?.find((personagem: any) => {
+                const findPlayer:boolean = personagem.ordem === cardNum
+                // remover personagem selecionado
+            });
+    }
 
     const cardsMapper: any = players?.map((personagem: any) => {
         return (
             <div className={`card_style_${qtdPlayers}`} key={personagem.ordem}>
-                <button className={'remove-card-btn'}>
+                <button onClick={(event) => handleDeletePlayer(event, personagem.ordem)} className={'remove-card-btn'}>
                     <Cross1Icon style={{width: '80%', height: '80%'}}/>
                 </button>
-                <p className={'card_atributo-personagem_nivel'}>{personagem.nivel}</p>
+                <p className={'card_atributo-personagem_nivel'}>1</p>
                 <p className={'card_atributo-personagem_nome'}>{personagem.nome}</p>
                 <img
                     src={gender[personagem.genero]}

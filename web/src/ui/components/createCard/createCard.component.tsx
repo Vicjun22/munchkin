@@ -27,7 +27,6 @@ export function CreateCard({ players, setPlayers, qtdPlayers, setOpenModal }: an
                   nome: nomeJogador
                 , genero: genero
                 , ordem: players.length
-                , nivel: 1
             };
             setPlayers([...players, newPlayer]);
             setNomeJogador('');
