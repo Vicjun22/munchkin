@@ -15,7 +15,7 @@ export function Home({ players, setPlayers }: any) {
                 {!newGame 
                     ?
                     <HomePrimary
-                        player={players}
+                        players={players}
                         setNewGame={setNewGame}
                         setButtonHovered={setButtonHovered}
                     />

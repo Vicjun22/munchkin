@@ -24,7 +24,6 @@
     .section_create-players_container-cards {
         width: 55%;
         height: 100%;
-        padding: 5%;
 
         display: flex;
         align-items: center;
@@ -60,6 +59,10 @@
             border: none;
             border-radius: 20px;
             background: #FACC97;
+        }
+
+        .section_create-players_0-cards {
+            display: none;
         }
     }
 }

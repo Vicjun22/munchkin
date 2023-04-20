@@ -3,7 +3,7 @@ import './createPlayers.style.scss';
 import { useNavigate } from 'react-router';
 import { useEffect, useState } from 'react';
 
-import { Button, CreateCard, ExitModal, Title } from '../../components';
+import { Button, Cards, CreateCard, ExitModal, Title } from '../../components';
 import { MUNCHKIN, ROUTES } from '../../../constants';
 
 import FemaleAvatar from '../../../assets/images/human-female.svg';
@@ -51,24 +51,7 @@ export function CreatePlayers({ players, setPlayers, qtdPlayers }: any) {
     //     navigate(ROUTES.GAME_PAGE.path);
     // }
 
-    // const mapperPlayers: any = players?.map((player: PlayerType) => {
-    //     return (
-    //         <div
-    //             key={player.ordem}
-    //             id={`cy-player-${player.ordem + 1}`}
-    //             className={'player-card'}
-    //         >
-    //             <div>
-    //                 <h3>{player.ordem + 1}º</h3>
-    //                 <h3>{player.nome}</h3>
-    //             </div>
-    //             <img
-    //                 src={player.genero === 'feminino' ? FemaleAvatar : MaleAvatar}
-    //                 alt={'avatar'}
-    //             />
-    //         </div>
-    //     )
-    // })
+
 
     return (
         <section className={'section_create-players'}>
@@ -83,12 +66,13 @@ export function CreatePlayers({ players, setPlayers, qtdPlayers }: any) {
                 />
             </div>
 
-            <div className={'section_create-players_container-cards'}>
+            <div className={`section_create-players_container-cards section_create-players_${players.length}-cards`}>
                 
-                {/* <Cards
+                <Cards
                     players={players}
                     setPlayers={setPlayers}
-                /> */}
+                    qtdPlayers={qtdPlayers}
+                />
 
             </div>
             

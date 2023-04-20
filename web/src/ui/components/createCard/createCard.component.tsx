@@ -24,9 +24,10 @@ export function CreateCard({ players, setPlayers, qtdPlayers, setOpenModal }: an
         event.preventDefault();
         if (players.length < 6) {
             const newPlayer = {
-                nome: nomeJogador
+                  nome: nomeJogador
                 , genero: genero
                 , ordem: players.length
+                , nivel: 1
             };
             setPlayers([...players, newPlayer]);
             setNomeJogador('');
@@ -81,7 +82,7 @@ export function CreateCard({ players, setPlayers, qtdPlayers, setOpenModal }: an
 
                 <Button
                     type={'submit'}
-                    disabled={qtdPlayers === 'um-jogador' ? players.length > 1 || !isDadosSuficientes : players.length >= 6 || !isDadosSuficientes}
+                    disabled={(qtdPlayers === 'um-jogador' && players.length >= 1) || players.length >= 6 || !isDadosSuficientes}
                     id={'cy_create-players-btn_adicionar'}
                 >
                     {qtdPlayers === 'um-jogador' ? 'Criar Card' : 'Adicionar'}

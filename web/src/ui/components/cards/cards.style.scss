@@ -1,0 +1,122 @@
+.section_cards {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    gap: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    overflow-y: auto;
+}
+
+.section_cards::-webkit-scrollbar {
+    background-color: #491712;
+}
+
+.section_cards::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #FA8B17;
+}
+
+.card_style_varios-jogadores, .card_style_um-jogador {
+    width: 200px;
+    height: 250px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+
+    border: 10px solid #491712;
+    border-radius: 20px;
+    background: #FA8B17;
+
+    .remove-card-btn {
+        width: 40px;
+        height: 40px;
+
+        position: absolute;
+        top: -20px;
+        right: -20px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #FA8B17;
+
+        cursor: pointer;
+        filter: brightness(0.7);
+
+        border: 1px solid #491712;
+        border-radius: 100%;
+        background: #f11e0b;
+    }
+
+    .remove-card-btn:hover {
+        filter: brightness(1);
+    }
+
+    .card_atributo-personagem_nivel {
+        width: 40px;
+        height: 20px;
+
+        color: #FA8B17;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        top: 0px;
+
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background: #491712;
+    }
+
+    .card_atributo-personagem_nome {
+        width: 90%;
+        height: 25%;
+
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .card_atributo-personagem_img {
+        height: 70%;
+    }
+
+    .card_atributo-personagem_ordem {
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+    }
+}
+
+.card_style_um-jogador {
+    width: 300px;
+    height: 400px;
+    padding: 40px 0 20px;
+
+    .remove-card-btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    .card_atributo-personagem_nivel {
+        width: 50px;
+        height: 30px;
+    }
+
+    .card_atributo-personagem_nome {
+        height: 22%;
+        font-size: x-large;
+    }
+}

@@ -7,4 +7,5 @@ export { ImagesHovered } from './imgHovered/imgHovered.components';
 export { HomePrimary } from './homePrimary/homePrimary.component';
 export { HomeSecondary } from './homeSecondary/homeSecondary.component';
 
+export { Cards } from './cards/cards.component';
 export { CreateCard } from './createCard/createCard.component';
