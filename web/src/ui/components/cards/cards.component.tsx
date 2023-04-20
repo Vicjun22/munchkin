@@ -3,6 +3,7 @@ import './cards.style.scss';
 import FemaleAvatar from '../../../assets/images/munchkin_human-female.svg';
 import MaleAvatar from '../../../assets/images/munchkin_human-male.svg';
 import { Cross1Icon } from '@radix-ui/react-icons';
+import { PlayerType } from '../../../types';
 
 export function Cards({ players, setPlayers, qtdPlayers }: any) {
     const gender: any = {
@@ -12,12 +13,17 @@ export function Cards({ players, setPlayers, qtdPlayers }: any) {
 
     function handleDeletePlayer(event: any, cardNum: number) {
         event.preventDefault();
-        qtdPlayers === 'um-jogador' 
-            ? setPlayers([]) 
-            : players?.find((personagem: any) => {
-                const findPlayer:boolean = personagem.ordem === cardNum
-                // remover personagem selecionado
-            });
+        if (qtdPlayers === 'um-jogador') {
+            setPlayers([])
+        }
+        
+        if (qtdPlayers === 'varios-jogadores') {
+            let novosJogadores = players.filter((player: PlayerType) => player.ordem !== cardNum);
+            for(let i = 0; i < novosJogadores.length; i++) {
+                novosJogadores[i].ordem = i;
+            }
+            setPlayers(novosJogadores);
+        }
     }
 
     const cardsMapper: any = players?.map((personagem: any) => {

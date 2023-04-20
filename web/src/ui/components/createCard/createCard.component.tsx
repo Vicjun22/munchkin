@@ -4,7 +4,6 @@ import { useState } from "react";
 import { NavigateFunction, useNavigate } from 'react-router-dom';
 
 import { Button } from "../button/button.component"
-import { MUNCHKIN, ROUTES } from '../../../constants';
 
 import FemaleAvatar from '../../../assets/images/munchkin_human-female.svg';
 import MaleAvatar from '../../../assets/images/munchkin_human-male.svg';
@@ -12,7 +11,6 @@ import MaleAvatar from '../../../assets/images/munchkin_human-male.svg';
 export function CreateCard({ players, setPlayers, qtdPlayers, setOpenModal }: any) {
     const [nomeJogador, setNomeJogador] = useState<string>('');
     const [genero, setGenero] = useState<string>('');
-    const navigate: NavigateFunction = useNavigate();
     const isDadosSuficientes: boolean = nomeJogador !== '' && genero !== '';
 
     function handleSetGender(event: any, gender: string) {
