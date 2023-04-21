@@ -3,7 +3,7 @@ import './player.style.scss';
 import { useNavigate } from 'react-router';
 import { useEffect, useState } from 'react';
 
-import { Button, Cards, CreateCard, ExitModal, Title } from '../../components';
+import { Button, CreatePlayer, CreateCard, ExitModal, Title } from '../../components';
 import { MUNCHKIN, ROUTES } from '../../../constants';
 
 import FemaleAvatar from '../../../assets/images/human-female.svg';
@@ -58,7 +58,7 @@ export function Player({ players, setPlayers, qtdPlayers }: any) {
             <div className={'section_create-players_container'}>
                 <Title />
 
-                <CreateCard 
+                <CreatePlayer 
                     players={players}
                     setPlayers={setPlayers}
                     qtdPlayers={qtdPlayers}
@@ -68,7 +68,7 @@ export function Player({ players, setPlayers, qtdPlayers }: any) {
 
             <div className={`section_create-players_container-cards section_create-players_${players.length}-cards`}>
                 
-                <Cards
+                <CreateCard
                     players={players}
                     setPlayers={setPlayers}
                     qtdPlayers={qtdPlayers}

@@ -1,11 +1,14 @@
 export { Title } from './title/title.component';
-export { ExitModal } from './exitModal/exitModal.component';
 export { Button } from './button/button.component';
 export { ExitButton } from './exitButton/exitButton.component';
-export { ImagesHovered } from './imgHovered/imgHovered.components';
 
 export { HomePrimary } from './homePrimary/homePrimary.component';
 export { HomeSecondary } from './homeSecondary/homeSecondary.component';
 
-export { Cards } from './cards/cards.component';
+export { CreatePlayer } from './createPlayer/createPlayer.component';
 export { CreateCard } from './createCard/createCard.component';
+export { Card } from './card/card.component';
+
+export { ImagesHovered } from './imgHovered/imgHovered.components';
+
+export { ExitModal } from './exitModal/exitModal.component';
