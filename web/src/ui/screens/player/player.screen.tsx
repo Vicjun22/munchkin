@@ -1,4 +1,4 @@
-import './createPlayers.style.scss';
+import './player.style.scss';
 
 import { useNavigate } from 'react-router';
 import { useEffect, useState } from 'react';
@@ -11,7 +11,7 @@ import MaleAvatar from '../../../assets/images/human-male.svg';
 
 import type { PlayerType } from '../../../types';
 
-export function CreatePlayers({ players, setPlayers, qtdPlayers }: any) {
+export function Player({ players, setPlayers, qtdPlayers }: any) {
     const [openModal, setOpenModal] = useState<boolean>(false);
 
     useEffect(() => {

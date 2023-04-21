@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 import { ROUTES, MUNCHKIN, MUNCHKIN_QTD_PLAYERS } from './constants';
 import { verificaPeriodoAtualDoDia } from './utils';
-import { Home, CreatePlayers, GameScreen, Rules } from './ui/screens';
+import { Home, Player, GameScreen, Rules } from './ui/screens';
 
 import { PlayerType } from './types';
 
@@ -28,13 +28,7 @@ export function App() {
 
         <Route
           path={ROUTES.PLAYERS_PAGE.path}
-          element={ 
-            <CreatePlayers
-              qtdPlayers={qtdPlayers}
-              players={players}
-              setPlayers={setPlayers}
-            /> 
-          }
+          element={ <Player qtdPlayers={qtdPlayers} players={players} setPlayers={setPlayers} /> }
         />
 
         <Route
