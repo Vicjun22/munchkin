@@ -5,8 +5,8 @@ import Dragon from '../../../assets/images/munchkin_old-dragon.svg';
 
 export function ImagesHovered({ buttonHoverd }: any) {
     const imagem: any = {
-          continuar:    Dragon
-        , regras:       Rules
+        continuar:  Dragon,
+        regras:     Rules
     }
 
     return (
