@@ -16,10 +16,16 @@ export function CreateCard({ players, setPlayers, qtdPlayers }: any) {
     const qtdMiss: number = qtdPlayers === 'um-jogador' ? 1 - players?.length : 6 - players?.length;
 
     for (let i = 0; i < qtdMiss; i++) {
-        missCard.push(<img src={BackCard} alt={'munchkin door'} className={`create-card_default-${qtdPlayers}-card`} />)
+        missCard.push(
+            <img
+                src={BackCard}
+                alt={'munchkin door'}
+                className={`create-card_default-${qtdPlayers}-card`}
+                key={i}
+            />)
     }
     
-    const cardsMapper: any = players?.map((personagem: any) => {
+    const cardsMapper: any = players?.map((personagem: any, index: number) => {
         return (
             <Card
                 players={players}
@@ -27,6 +33,7 @@ export function CreateCard({ players, setPlayers, qtdPlayers }: any) {
                 personagem={personagem}
                 qtdPlayers={qtdPlayers}
                 card={'created'}
+                key={index}
             />
         )
     })

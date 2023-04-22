@@ -1,71 +1,30 @@
-.rules_section {
+.section_rules {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
 
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: center;
 
-    background: radial-gradient(50% 50% at 50% 50%, rgba(40, 30, 27, 1) 0%, rgba(14, 9, 11, 1) 100%);
-    
-    .rules_container {
-        width: 90%;
-        margin: 10vh 0;
-        padding: 60px 30px;
-    
+    position: relative;
+
+    .section_rules_container {
+        width: 45%;
+        height: 100%;
+
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-    
-        color: #FA8B17;
-        font-family: 'comicsans';
-        font-size: 18px;
-    
+        justify-content: space-evenly;
+
         position: relative;
-    
-        border: 3px solid #FA8B17;
-        border-radius: 30px;
-    
-        .rules_title {
-            width: 100%;
-            height: 25%;
-            margin-bottom: 50px;
-    
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-    
-        .rules_content {
-            width: 100%;
 
-            text-align: justify;
-            column-count: 2;
-        }
+        border-right: 5px solid #FA8B17;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(40, 30, 27, 0.9) 0%, rgba(14, 9, 11, 0.9) 100%);
     }
-}
 
-
-@media screen and (max-width: 768px) {
-    .rules_section {
-
-        .rules_container {
-            margin: 5vh 0;
-
-            font-size: 16px;
-
-            .rules_title {
-                margin-bottom: 50px;
-            }
-
-            .rules_content {
-                width: 100%;
-        
-                text-align: justify;
-                column-count: 1;
-            }
-        } 
+    .section_rules_content {
+        width: 55%;
+        height: 100%;
     }
 }
