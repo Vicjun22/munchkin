@@ -1,7 +1,6 @@
 import './createPlayer.style.scss';
 
 import { useState } from "react";
-import { NavigateFunction, useNavigate } from 'react-router-dom';
 
 import { Button } from "../button/button.component"
 
@@ -24,8 +23,10 @@ export function CreatePlayer({ players, setPlayers, qtdPlayers, setOpenModal }: 
             const newPlayer = {
                   nome: nomeJogador
                 , genero: genero
+                , nivel: 1
                 , ordem: players.length
-                , raca: 'Humano'
+                , duasRacas: false
+                , raca1: 'humano'
             };
             setPlayers([...players, newPlayer]);
             setNomeJogador('');

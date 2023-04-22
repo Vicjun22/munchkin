@@ -4,7 +4,7 @@ import { ROUTES } from "../../../constants";
 import { Button } from "../button/button.component";
 
 export function HomePrimary({ players, setNewGame, setButtonHovered }: any) {
-    const isJogoIniciado: boolean = players.some((player: any) => player.nivel >= 1) || false;
+    const isJogoIniciado: boolean = players.some((player: any) => player.iniciouJogo) || false;
     const navigate: NavigateFunction = useNavigate();
 
     function handleContinuar(event: any) {

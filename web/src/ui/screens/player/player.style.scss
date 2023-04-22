@@ -17,8 +17,14 @@
         align-items: center;
         justify-content: space-evenly;
 
+        position: relative;
+
         border-right: 5px solid #FA8B17;
         background: radial-gradient(50% 50% at 50% 50%, rgba(40, 30, 27, 0.9) 0%, rgba(14, 9, 11, 0.9) 100%);
+
+        .section_crate-players_player-created {
+            display: none;
+        }
     }
 
     .section_create-players_container-cards {
@@ -50,11 +56,30 @@
             border: none;
             border-radius: 20px;
             background: #FACC97;
+
+            .section_crate-players_player-created {
+                width: 50px;
+                height: 50px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                position: absolute;
+                bottom: 120px;
+                right: 30px;
+
+                color: #FACC97;
+                
+                border-radius: 10px;
+                background: #491712;
+                animation: transparent 2s 2 linear forwards;
+            }
         }
 
         .section_create-players_container-cards {
             width: 100%;
-            height: calc(100vh - 40px);
+            height: calc(auto - 40px);
 
             border: none;
             border-radius: 20px;
@@ -64,5 +89,24 @@
         .section_create-players_0-cards {
             display: none;
         }
+    }
+}
+
+@keyframes transparent {
+    0% {
+        color: transparent;
+        background: transparent;
+    };
+    40% {
+        color: #FACC97;
+        background: #491712;
+    };
+    60% {
+        color: #FACC97;
+        background: #491712;
+    };
+    100% {
+        color: transparent;
+        background: transparent;
     }
 }
