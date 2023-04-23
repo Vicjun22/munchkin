@@ -14,8 +14,8 @@ export function Player({ players, setPlayers, qtdPlayers }: any) {
     }, [players])
 
     return (
-        <section className={'section_create-players'}>
-            <div className={'section_create-players_container'}>
+        <section className={'section_players'}>
+            <div className={'section_players_container'}>
                 <Title />
 
                 <CreatePlayer 
@@ -26,13 +26,13 @@ export function Player({ players, setPlayers, qtdPlayers }: any) {
                 />
                 
                 { players.length !== 0 &&
-                <div className={'section_crate-players_player-created'}>
+                <div className={'section_players_player-created'}>
                     <ThickArrowDownIcon style={{width: '50%', height: '50%'}} />
                 </div> }
 
             </div>
 
-            <div className={`section_create-players_container-cards section_create-players_${players.length}-cards`}>
+            <div className={`section_players_container-cards section_players_${players.length}-cards`}>
                 
                 <CreateCard
                     players={players}

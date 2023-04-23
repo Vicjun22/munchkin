@@ -34,12 +34,7 @@ export function App() {
         <Route
           path={ROUTES.GAME_PAGE.path}
           element={
-            <GameScreen 
-              players={players}
-              setPlayers={setPlayers}
-              gameStorage={gameStorage}
-              qtdPlayers={qtdPlayers}
-            />
+            <GameScreen qtdPlayers={qtdPlayers} players={players} setPlayers={setPlayers} gameStorage={gameStorage} />
           }
         />
 

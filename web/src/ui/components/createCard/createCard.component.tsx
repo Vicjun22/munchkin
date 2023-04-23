@@ -51,6 +51,7 @@ export function CreateCard({ players, setPlayers, qtdPlayers }: any) {
         event.preventDefault();
         const playersComPropriedades = players.map((player: PlayerType) => ({
             ...player
+            , iniciouJogo: true
             , duasClasses: false
             , chapeu: 0
             , armadura: 0

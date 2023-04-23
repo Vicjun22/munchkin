@@ -5,9 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { ROUTES } from '../../../constants';
 
-import type { PlayerType } from '../../../types';
-
-export function GameScreen({ players, setPlayers, gameStorage, howMuchPlayers }: any) {
+export function GameScreen({ qtdPlayers, players, setPlayers, gameStorage }: any) {
 
     const navigate = useNavigate()
 
@@ -17,20 +15,9 @@ export function GameScreen({ players, setPlayers, gameStorage, howMuchPlayers }:
         }
     }, [])
 
-    console.log(gameStorage)
-
-    const mapperPlayers: any = players?.map((player: PlayerType, index: number) => {
-        return (
-            <div key={index}>
-                <h3>{player.ordem + 1}</h3>
-                <h3>{player.nome}</h3>
-            </div>
-        )
-    })
-
     return (
-        <div>
-            {mapperPlayers}
-        </div>
+        <section className={'section_game'}>
+            
+        </section>
     )
 }
