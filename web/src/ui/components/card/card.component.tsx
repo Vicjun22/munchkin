@@ -20,7 +20,7 @@ export function Card({players, setPlayers, personagem, qtdPlayers, card}: any) {
         }
         
         if (qtdPlayers === 'varios-jogadores') {
-            let novosJogadores = players.filter((player: PlayerType) => player.ordem !== cardNum);
+            const novosJogadores = players.filter((player: PlayerType) => player.ordem !== cardNum);
             for(let i = 0; i < novosJogadores.length; i++) {
                 novosJogadores[i].ordem = i;
             }
@@ -35,7 +35,7 @@ export function Card({players, setPlayers, personagem, qtdPlayers, card}: any) {
                     <Cross1Icon style={{width: '80%', height: '80%'}}/>
                 </button>
             }
-            <p className={'card_atributo-personagem_nivel'}>1</p>
+            <p className={'card_atributo-personagem_nivel'}>{personagem.nivel}</p>
             <p className={'card_atributo-personagem_nome'}>{personagem.nome}</p>
             <img
                 src={gender[personagem.genero]}
@@ -43,7 +43,7 @@ export function Card({players, setPlayers, personagem, qtdPlayers, card}: any) {
                 className={'card_atributo-personagem_img'}
             />
             <p className={'card_atributo-personagem_raca'}>
-                {personagem.raca}
+                {personagem.duasRacas ? `${personagem.raca1 + ' / ' + personagem.raca2}` : personagem.raca1}
             </p>
             {qtdPlayers === 'varios-jogadores'
                 && 

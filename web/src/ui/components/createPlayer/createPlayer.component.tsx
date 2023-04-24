@@ -1,7 +1,6 @@
 import './createPlayer.style.scss';
 
 import { useState } from "react";
-import { NavigateFunction, useNavigate } from 'react-router-dom';
 
 import { Button } from "../button/button.component"
 
@@ -15,7 +14,7 @@ export function CreatePlayer({ players, setPlayers, qtdPlayers, setOpenModal }: 
 
     function handleSetGender(event: any, gender: string) {
         event.preventDefault();
-        gender !== genero && setGenero(gender);
+        setGenero(gender);
     }
 
     function handleSubmit(event: any) {
@@ -23,9 +22,11 @@ export function CreatePlayer({ players, setPlayers, qtdPlayers, setOpenModal }: 
         if (players.length < 6) {
             const newPlayer = {
                   nome: nomeJogador
-                , genero: genero
+                , genero
+                , nivel: 1
                 , ordem: players.length
-                , raca: 'Humano'
+                , duasRacas: false
+                , raca1: 'humano'
             };
             setPlayers([...players, newPlayer]);
             setNomeJogador('');

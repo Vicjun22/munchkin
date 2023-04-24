@@ -15,7 +15,7 @@ export function App() {
   const gameStorageData: any = gameStorage ? JSON?.parse(gameStorage) : [];
 
   const [players, setPlayers] = useState<PlayerType[]>(gameStorageData);
-  let horario: string = verificaPeriodoAtualDoDia()
+  const horario: string = verificaPeriodoAtualDoDia()
 
   return (
     <div className={`${horario}`}>
@@ -34,12 +34,7 @@ export function App() {
         <Route
           path={ROUTES.GAME_PAGE.path}
           element={
-            <GameScreen 
-              players={players}
-              setPlayers={setPlayers}
-              gameStorage={gameStorage}
-              qtdPlayers={qtdPlayers}
-            />
+            <GameScreen qtdPlayers={qtdPlayers} players={players} setPlayers={setPlayers} gameStorage={gameStorage} />
           }
         />
 

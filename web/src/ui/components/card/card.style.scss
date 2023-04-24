@@ -1,6 +1,6 @@
 .card_style_varios-jogadores, .card_style_um-jogador {
-    width: 200px;
-    height: 250px;
+    width: 220px;
+    height: 300px;
     padding: 20px;
 
     display: flex;
@@ -10,9 +10,10 @@
 
     position: relative;
 
-    border: 10px solid #491712;
-    border-radius: 20px;
-    background: #FA8B17;
+    border: 10px solid #4C1A11;
+    background: #ECC6A7;
+
+    animation: spin 0.5s linear forwards;
 
     .remove-card-btn {
         width: 40px;
@@ -41,10 +42,10 @@
     }
 
     .card_atributo-personagem_nivel {
-        width: 40px;
+        width: 60px;
         height: 20px;
 
-        color: #FA8B17;
+        color: #ECC6A7;
 
         display: flex;
         align-items: center;
@@ -63,11 +64,13 @@
         height: 25%;
 
         text-align: center;
+        font-size: larger;
         overflow: hidden;
     }
 
     .card_atributo-personagem_img {
         height: 70%;
+        background: transparent;
     }
 
     .card_atributo-personagem_raca {
@@ -101,5 +104,66 @@
     .card_atributo-personagem_nome {
         height: 22%;
         font-size: x-large;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .card_style_varios-jogadores {
+        width: 100%;
+        height: 80px;
+        padding: 0 20px;
+
+        border: 2px solid #491712;
+        border-radius: 10px;
+
+        flex-direction: row;
+        justify-content: space-between;
+
+        .remove-card-btn {
+            width: 30px;
+            height: 30px;
+            top: -15px;
+            right: -2px;
+        }
+
+        .card_atributo-personagem_nivel {
+            width: 50px;
+
+            top: -10px;
+            left: 0;
+
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+
+        .card_atributo-personagem_nome {
+            width: 80%;
+            height: 70%;
+
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-start;
+
+            font-size: medium;
+            overflow: hidden;
+        }
+
+        .card_atributo-personagem_raca, .card_atributo-personagem_ordem {
+            bottom: -25px;
+        }
+
+        .remove-card-btn:hover {
+            filter: brightness(0.7);
+        }
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateY(270deg);
+    }
+    100% {
+        transform: rotateY(360deg);
     }
 }

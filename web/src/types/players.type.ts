@@ -1,4 +1,6 @@
 export interface PlayerType {
+    iniciouJogo?: boolean;
+    
     nome?: string;
     genero?: string;
     ordem: number;
