@@ -11,9 +11,11 @@ export function Rules() {
     const navigate = useNavigate();
     const [ruleContent, setRuleContent] = useState<string>('REGRAS');
 
-    const titulos = rules.map((regras: any, index: number) => {
+    let indexNum: number = 0;
+
+    const titulos = rules.map((regras: any) => {
         return (
-            <li onClick={() => setRuleContent(regras.title)} className={'regras_titulos'} key={index}>
+            <li onClick={() => setRuleContent(regras.title)} className={'regras_titulos'} key={indexNum}>
                 {regras.title}
             </li>
         )
@@ -23,14 +25,37 @@ export function Rules() {
         if (regras.title !== ruleContent) {
             return;
         }
+        
+        const conteudo: string[] = regras.content.map((content: string) => {
+            indexNum++;
+            return (
+                <p key={indexNum}>{content}</p>
+            )
+        });
 
-        const conteudo: string[] = regras.content.map((content: string) => <p>{content}</p>);
+        const subConteudo: any = regras.more?.map((subConteudo: any) => {
+            indexNum++;
+            const conteudo: any = subConteudo.content.map((content: string) => {
+                indexNum++;
+                return (
+                    <p key={indexNum}>{content}</p>
+                )
+            })
+
+            return (
+                <>
+                    <h3 key={indexNum}>{subConteudo.subtitle}</h3>
+                    {conteudo}
+                </>
+            )
+        })
         
         return (
-            <>
+            <div className={'rules_content-div'} key={indexNum}>
                 <h1>{regras.title}</h1>
-                <p>{conteudo}</p>
-            </>
+                {conteudo}
+                {subConteudo}
+            </div>
         )
     })
     

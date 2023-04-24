@@ -37,7 +37,7 @@
             padding: 5px;
 
             color: #FA8B17;
-            font-family: 'comicsans';
+            font-family: 'comicsans', sans-serif;
             text-align: center;
             list-style: none;
 
@@ -54,5 +54,31 @@
     .section_rules_content {
         width: 55%;
         height: 100%;
+        padding: 5% 12%;
+
+        background-image: url('../../../assets/images/munchkin_paper.svg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        
+        .rules_content-div {
+            width: 100%;
+            height: 100%;
+            padding: 0 5%;
+
+            font-family: 'comicsans', sans-serif;
+            text-align: justify;
+
+            overflow-y: auto;
+        }
+
+        .rules_content-div::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        .rules_content-div::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: #000000;
+        }
     }
 }
