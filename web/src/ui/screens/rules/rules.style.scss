@@ -21,6 +21,34 @@
 
         border-right: 5px solid #FA8B17;
         background: radial-gradient(50% 50% at 50% 50%, rgba(40, 30, 27, 0.9) 0%, rgba(14, 9, 11, 0.9) 100%);
+
+        .regras_titulos_container {
+            width: 100%;
+            height: 70%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .regras_titulos {
+            width: 400px;
+            padding: 5px;
+
+            color: #FA8B17;
+            font-family: 'comicsans';
+            text-align: center;
+            list-style: none;
+
+            cursor: pointer;
+
+            border-bottom: 5px solid #491712;
+        }
+
+        .regras_titulos:hover {
+            border-bottom: 5px solid #FA8B17;
+        }
     }
 
     .section_rules_content {
