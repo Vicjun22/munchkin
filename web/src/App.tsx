@@ -15,7 +15,7 @@ export function App() {
   const gameStorageData: any = gameStorage ? JSON?.parse(gameStorage) : [];
 
   const [players, setPlayers] = useState<PlayerType[]>(gameStorageData);
-  let horario: string = verificaPeriodoAtualDoDia()
+  const horario: string = verificaPeriodoAtualDoDia()
 
   return (
     <div className={`${horario}`}>

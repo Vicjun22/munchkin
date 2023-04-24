@@ -14,7 +14,7 @@ export function CreatePlayer({ players, setPlayers, qtdPlayers, setOpenModal }: 
 
     function handleSetGender(event: any, gender: string) {
         event.preventDefault();
-        gender !== genero && setGenero(gender);
+        setGenero(gender);
     }
 
     function handleSubmit(event: any) {
@@ -22,7 +22,7 @@ export function CreatePlayer({ players, setPlayers, qtdPlayers, setOpenModal }: 
         if (players.length < 6) {
             const newPlayer = {
                   nome: nomeJogador
-                , genero: genero
+                , genero
                 , nivel: 1
                 , ordem: players.length
                 , duasRacas: false

@@ -20,7 +20,7 @@ export function Card({players, setPlayers, personagem, qtdPlayers, card}: any) {
         }
         
         if (qtdPlayers === 'varios-jogadores') {
-            let novosJogadores = players.filter((player: PlayerType) => player.ordem !== cardNum);
+            const novosJogadores = players.filter((player: PlayerType) => player.ordem !== cardNum);
             for(let i = 0; i < novosJogadores.length; i++) {
                 novosJogadores[i].ordem = i;
             }
