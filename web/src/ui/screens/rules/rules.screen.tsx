@@ -5,15 +5,19 @@ import { useNavigate } from 'react-router-dom';
 import { rules } from '../../../utils/rules';
 import { Button } from '../../components';
 import { ROUTES } from '../../../constants';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 export function Rules() {
     const navigate = useNavigate();
     const [ruleContent, setRuleContent] = useState<string>('REGRAS');
 
-    const titulos = rules.map((regras: any, index: number) => {
+    const titulos = rules.map((regras: any) => {
         return (
-            <li onClick={() => setRuleContent(regras.title)} className={'regras_titulos'} key={index}>
+            <li
+                onClick={() => setRuleContent(regras.title)}
+                className={ruleContent === regras.title ? 'regras_titulos-selecionado' : 'regras_titulos'}
+                key={regras.title + '_0'}
+            >
                 {regras.title}
             </li>
         )
@@ -24,16 +28,45 @@ export function Rules() {
             return;
         }
 
-        const conteudo: string[] = regras.content.map((content: string) => <p>{content}</p>);
-        
+        const conteudo: string[] = regras.content.map((content: string, index: number) => {
+            ;
+            return (
+                <React.Fragment key={content + `_${index}`}>
+                    <p>{content}</p>
+                    <br></br>
+                </React.Fragment>
+            )
+        });
+
+        const subConteudo: any = regras.more?.map((subContent: any) => {
+            const moreContentList = subContent.content.map((moreContent: string, index: number) => {
+                return (
+                    <React.Fragment key={moreContent + `_${index}`}>
+                        <p>{moreContent}</p>
+                        <br></br>
+                    </React.Fragment>
+                )
+            })
+
+            return (
+                <React.Fragment key={subContent.subtitle}>
+                    <h3>{subContent.subtitle}</h3>
+                    <br></br>
+                    {moreContentList}
+                </React.Fragment>
+            )
+        })
+
         return (
-            <>
-                <h1>{regras.title}</h1>
-                <p>{conteudo}</p>
-            </>
+            <div className={'rules_content-div'} key={regras.title + '_1'}>
+                <h1 className={'rules_content-title'}>{regras.title}</h1>
+                <br></br>
+                {conteudo}
+                {subConteudo}
+            </div>
         )
     })
-    
+
     return (
         <section className={'section_rules'}>
             <div className={'section_rules_container'}>

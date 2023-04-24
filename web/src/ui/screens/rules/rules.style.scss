@@ -32,12 +32,12 @@
             justify-content: space-between;
         }
 
-        .regras_titulos {
+        .regras_titulos, .regras_titulos-selecionado {
             width: 400px;
             padding: 5px;
 
             color: #FA8B17;
-            font-family: 'comicsans';
+            font-family: 'comicsans', sans-serif;
             text-align: center;
             list-style: none;
 
@@ -49,10 +49,113 @@
         .regras_titulos:hover {
             border-bottom: 5px solid #FA8B17;
         }
+
+        .regras_titulos-selecionado {
+            border-bottom: 5px solid #FA8B17;
+        }
     }
 
     .section_rules_content {
         width: 55%;
         height: 100%;
+        padding: 5% 12%;
+
+        background-image: url('../../../assets/images/munchkin_paper.svg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        
+        .rules_content-div {
+            width: 100%;
+            height: 100%;
+            padding: 0 5%;
+
+            font-family: 'comicsans', sans-serif;
+            text-align: justify;
+
+            overflow-y: auto;
+
+            .rules_content-title {
+                text-align: start;
+            }
+        }
+
+        .rules_content-div::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        .rules_content-div::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: #000000;
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) and (min-height: 900px) {
+    .section_rules {
+
+        .section_rules_content {
+            padding: 10% 5%;
+        }
+    }
+}
+
+@media screen and (max-width: 1150px) and (min-height: 900px) {
+    .section_rules {
+
+        .section_rules_content {
+            padding: 15% 5%;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .section_rules {
+        height: auto;
+        width: 100%;
+        padding: 20px;
+        gap: 40px;
+
+        display: flex;
+        flex-direction: column;
+
+        background: #491712;
+
+        .section_rules_container {
+            width: 100%;
+            height: calc(100vh - 40px);
+
+            border: none;
+            border-radius: 20px;
+            background: #FACC97;
+
+            .regras_titulos, .regras_titulos-selecionado {
+                width: 90%;
+                margin-bottom: 2px;
+
+                color: #491712;
+
+                border-bottom: 1px solid #491712;
+            }
+
+            .regras_titulos:hover, .regras_titulos-selecionado {
+                margin-bottom: 0;
+                border-bottom: 3px solid #491712;
+            }
+        }
+
+        .section_rules_content {
+            width: 100%;
+            min-height: calc(100vh - 40px);
+            padding: 0;
+
+            border: none;
+            border-radius: 20px;
+            background: #FACC97;
+
+            .rules_content-div {
+                padding: 25px;
+            }
+        }
     }
 }

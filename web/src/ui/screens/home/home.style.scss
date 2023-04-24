@@ -33,7 +33,7 @@
             position: absolute;
             bottom: 20px;
         
-            font-family: 'Comicsans';
+            font-family: 'Comicsans', sans-serif;
             font-size: 14px;
             color: #FA8B17;
         }
@@ -73,7 +73,7 @@
             .section_menu_content::after {
                 bottom: 30px;
             
-                font-family: 'Comicsans';
+                font-family: 'Comicsans', sans-serif;
                 color: #491712;
             }
         }
