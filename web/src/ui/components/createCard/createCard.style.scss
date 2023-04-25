@@ -81,6 +81,10 @@
 
             justify-content: space-evenly;
 
+            .create-card_void-div {
+                display: none;
+            }
+
             button {
                 height: 60%;
             }

@@ -9,6 +9,8 @@ export { CreatePlayer } from './createPlayer/createPlayer.component';
 export { CreateCard } from './createCard/createCard.component';
 export { Card } from './card/card.component';
 
+export { CompleteAttributesCard } from './completeAttributesCard/completeAttributesCard.component';
+
 export { ImagesHovered } from './imgHovered/imgHovered.components';
 
 export { ExitModal } from './exitModal/exitModal.component';
