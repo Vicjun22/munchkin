@@ -1,13 +1,17 @@
 import './game.style.scss';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { ROUTES } from '../../../constants';
+import { CompleteAttributesCard } from '../../components';
+import { PlayerType } from '../../../types';
 
 export function GameScreen({ qtdPlayers, players, setPlayers, gameStorage }: any) {
-
+    const [ordemAtual, setOrdemAtual] = useState<number>(0);
     const navigate = useNavigate()
+
+    const playerAtual: PlayerType = players.find((player: PlayerType) => player.ordem === ordemAtual);
 
     useEffect(() => {
         if (!gameStorage) {
@@ -17,7 +21,7 @@ export function GameScreen({ qtdPlayers, players, setPlayers, gameStorage }: any
 
     return (
         <section className={'section_game'}>
-            
+            <CompleteAttributesCard player={playerAtual} setOrdemAtual={setOrdemAtual} />
         </section>
     )
 }

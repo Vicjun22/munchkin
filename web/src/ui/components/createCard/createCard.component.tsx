@@ -77,7 +77,7 @@ export function CreateCard({ players, setPlayers, qtdPlayers }: any) {
 
             <div className={'create-card_btn-container'}>
                 {qtdPlayers === 'um-jogador'
-                    ? <div></div>
+                    ? <div className={'create-card_void-div'}></div>
                     :
                     <Button
                         onClick={(event) => handleSortearOrdem(event)}
