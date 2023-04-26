@@ -4,15 +4,15 @@ export const ROUTES: any = {
         name: 'home_page',
     },
     PLAYERS_PAGE: {
-        path: '/munchkin/players/CARDS/',
+        path: '/munchkin/gameHelper/Cards/',
         name: 'create_players_cards',
     },
     GAME_PAGE: {
-        path: '/munchkin/gameHelper/Turns/',
+        path: '/munchkin/gameHelper/TheGame/',
         name: 'game_page',
     },
     RULES_PAGE: {
-        path: '/munchkin/rules/',
+        path: '/munchkin/gameHelper/rules/',
         name: 'rules_page',
     }
 };

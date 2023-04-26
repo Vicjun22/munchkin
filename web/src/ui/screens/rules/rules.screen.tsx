@@ -73,7 +73,12 @@ export function Rules() {
                 <ul className={'regras_titulos_container'}>
                     {titulos}
                 </ul>
-                <Button onClick={() => navigate(ROUTES.HOME_PAGE.path)}>Voltar</Button>
+                <Button
+                    id={'cy_rules-btn_voltar'}
+                    onClick={() => navigate(ROUTES.HOME_PAGE.path)}
+                >
+                    Voltar
+                </Button>
             </div>
 
             <div className={'section_rules_content'}>
