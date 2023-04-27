@@ -35,19 +35,19 @@ export function Card({players, setPlayers, personagem, qtdPlayers, card}: any) {
                     <Cross1Icon style={{width: '80%', height: '80%'}}/>
                 </button>
             }
-            <p className={'card_atributo-personagem_nivel'}>{personagem.nivel}</p>
-            <p className={'card_atributo-personagem_nome'}>{personagem.nome}</p>
+            <p id={`cy_card_nivel_${personagem.ordem}`} className={'card_atributo-personagem_nivel'}>{personagem.nivel}</p>
+            <p id={`cy_card_nome_${personagem.ordem}`} className={'card_atributo-personagem_nome'}>{personagem.nome}</p>
             <img
                 src={gender[personagem.genero]}
                 alt={'avatar do personagem'}
                 className={'card_atributo-personagem_img'}
             />
-            <p className={'card_atributo-personagem_raca'}>
+            <p id={`cy_card_raca_${personagem.ordem}`} className={'card_atributo-personagem_raca'}>
                 {personagem.duasRacas ? `${personagem.raca1 + ' / ' + personagem.raca2}` : personagem.raca1}
             </p>
             {qtdPlayers === 'varios-jogadores'
                 && 
-                <p className={'card_atributo-personagem_ordem'}>
+                <p id={`cy_card_ordem_${personagem.ordem}`} className={'card_atributo-personagem_ordem'}>
                     Ordem: {personagem.ordem + 1}
                 </p>
             }

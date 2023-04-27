@@ -14,130 +14,68 @@ describe('Munchkin | Helper', () => {
     cy.get('#cy_create-players-btn_adicionar').should('be.disabled');
     cy.get('#cy_create-card-img_m').click();
     cy.get('#cy_create-players-btn_adicionar').should('be.enabled').click();
-  })
+  });
 
-//   it('cadastra 6 jogadores', () => {
-//     cy.putSixPlayersInTheGame()
-//   });
+  it('deve cadastrar 6 jogadores corretamente', () => {
+    localStorage.setItem('munchkin_qtd_players', 'varios-jogadores');
+    cy.addSixPlayers()
+  });
 
-//   it('cadastra 6 jogadores e bloqueia botão de adicionar', () => {
-//     cy.putSixPlayersInTheGame()
-//     cy.get('#cy-add')
-//       .should('be.visible')
-//       .contains('#cy-add', 'Adicionar')
-//       .should('be.disabled');
-//   })
+  it('deve sair corretamente da tela de criação de 1 ficha', () => {
+    localStorage.setItem('munchkin_qtd_players', 'um-jogador');
+    cy.get('#cy_create-players-btn_sair').contains('Sair').click();
+    cy.get('.modal_content > div > :nth-child(2)').contains('Sim').click();
+  });
 
-//   it('botão de jogar está bloqueado enquanto não tiver jogadores o suficiente', () => {
-//     cy.get('#cy-play')
-//       .should('be.visible')
-//       .contains('#cy-play', 'Jogar')
-//       .should('be.disabled');
-//   })
+  it('deve sair corretamente da tela de criação de 3-6 fichas', () => {
+    localStorage.setItem('munchkin_qtd_players', 'varios-jogadors');
+    cy.get('#cy_create-players-btn_sair').contains('Sair').click();
+    cy.get('.modal_content > div > :nth-child(2)').contains('Sim').click();
+  });
 
-//   it('botão de jogar está bloqueado enquanto não tiver mais 1 jogador', () => {
-//     cy.get('#cy-name_input')
-//       .should('be.visible')
-//       .type('Victor Elias Ross Júnior')
-//       .should('have.value', 'Victor Elias Ross Júnior');
+  it('deve desistir de sair da tela de criação de 1 ficha', () => {
+    localStorage.setItem('munchkin_qtd_players', 'um-jogador');
+    cy.get('#cy_create-players-btn_sair').contains('Sair').click();
+    cy.get('.modal_content > div > :nth-child(1)').contains('Não').click();
+  });
 
-//     cy.get('#cy-gender_button-m')
-//       .should('be.visible')
-//       .click();
+  it('deve desistir de sair da tela de criação de 1 ficha clicando no ícone "X"', () => {
+    localStorage.setItem('munchkin_qtd_players', 'um-jogador');
+    cy.get('#cy_create-players-btn_sair').contains('Sair').click();
+    cy.get('.exit-modal_btn-cross').click();
+  });
 
-//     cy.get('#cy-add')
-//       .should('be.visible')
-//       .contains('#cy-add', 'Adicionar')
-//       .should('be.enabled')
-//       .click();
+  it('deve desistir de sair da tela de criação de 3-6 fichas', () => {
+    localStorage.setItem('munchkin_qtd_players', 'varios-jogadores');
+    cy.get('#cy_create-players-btn_sair').contains('Sair').click();
+    cy.get('.modal_content > div > :nth-child(1)').contains('Não').click();
+  });
 
-//     cy.get('#cy-play')
-//       .should('be.visible')
-//       .contains('#cy-play', 'Jogar')
-//       .should('be.disabled');
+  it('deve desistir de sair da tela de criação de 3-6 fichas clicando no ícone "X"', () => {
+    localStorage.setItem('munchkin_qtd_players', 'varios-jogadores');
+    cy.get('#cy_create-players-btn_sair').contains('Sair').click();
+    cy.get('.exit-modal_btn-cross').click();
+  });
 
-//     cy.get('#cy-name_input')
-//       .should('be.visible')
-//       .type('Karoline Lemes Vaz')
-//       .should('have.value', 'Karoline Lemes Vaz');
-  
-//     cy.get('#cy-gender_button-f')
-//       .should('be.visible')
-//       .click();
+  it('deve mudar a ordem dos jogadores aleatóriamente quando pressionado o botão de mudar ordem', () => {
+    localStorage.setItem('munchkin_qtd_players', 'varios-jogadores');
+    cy.addSixPlayers()
+    cy.get('#cy_create-players-btn_sortear-ordem').contains('Mudar Ordem').click();
+    cy.get('#cy_card_nome_0').should('not.contain', 'Victor') 
+      && cy.get('#cy_card_nome_1').should('not.contain', 'Karol');
+  });
 
-//     cy.get('#cy-add')
-//       .should('be.visible')
-//       .contains('#cy-add', 'Adicionar')
-//       .should('be.enabled')
-//       .click();
+  it('deve iniciar o jogo no modo 3-6 fichas', () => {
+    localStorage.setItem('munchkin_qtd_players', 'varios-jogadores');
+    cy.addSixPlayers()
+    cy.get('#cy_create-players-btn_jogar').contains('Jogar').click();
+  });
 
-//     cy.get('#cy-play')
-//       .should('be.visible')
-//       .contains('#cy-play', 'Jogar')
-//       .should('be.enabled')
-//       .click();
-//   });
-
-//   it('deve definir jogadores aleatóriamente', () => {
-//     cy.putSixPlayersInTheGame()
-
-//     cy.get('#cy-random')
-//       .should('be.visible')
-//       .contains('#cy-random', 'Trocar Ordem')
-//       .click()
-//   });
-
-//   it('botão de trocar ordem está bloqueado enquanto não tiver mais 1 jogador', () => {
-//     cy.get('#cy-name_input')
-//       .should('be.visible')
-//       .type('Victor Elias Ross Júnior')
-//       .should('have.value', 'Victor Elias Ross Júnior');
-
-//     cy.get('#cy-gender_button-m')
-//       .should('be.visible')
-//       .click();
-
-//     cy.get('#cy-add')
-//       .should('be.visible')
-//       .contains('#cy-add', 'Adicionar')
-//       .should('be.enabled')
-//       .click();
-
-//     cy.get('#cy-random')
-//       .should('be.visible')
-//       .contains('#cy-random', 'Trocar Ordem')
-//       .should('be.disabled');
-
-//     cy.get('#cy-name_input')
-//       .should('be.visible')
-//       .type('Karoline Lemes Vaz')
-//       .should('have.value', 'Karoline Lemes Vaz');
-  
-//     cy.get('#cy-gender_button-f')
-//       .should('be.visible')
-//       .click();
-
-//     cy.get('#cy-add')
-//       .should('be.visible')
-//       .contains('#cy-add', 'Adicionar')
-//       .should('be.enabled')
-//       .click();
-
-//     cy.get('#cy-random')
-//       .should('be.visible')
-//       .contains('#cy-random', 'Trocar Ordem')
-//       .should('be.enabled')
-//       .click();
-//   })
-
-//   it('ao clicar em sair, deve voltar à tela inicial', () => {
-//     cy.get('#cy-exit')
-//       .should('be.visible')
-//       .contains('#cy-exit', 'Sair')
-//       .should('be.enabled')
-//       .click();
-
-//     cy.contains('#cy-new_game', 'Novo Jogo');
-//     cy.contains('#cy-continue', 'Continuar');
-//   })
+  it('deve iniciar o jogo no modo 1 ficha', () => {
+    localStorage.setItem('munchkin_qtd_players', 'um-jogador');
+    cy.get('#cy_create-card-input_nome').type('Victor Elias').should('have.value', 'Victor Elias');
+    cy.get('#cy_create-card-img_m').click();
+    cy.get('#cy_create-players-btn_adicionar').contains('Criar Card').click();
+    cy.get('#cy_create-players-btn_jogar').contains('Jogar').click();
+  });
 });
