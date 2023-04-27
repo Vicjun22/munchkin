@@ -80,6 +80,7 @@ export function CreateCard({ players, setPlayers, qtdPlayers }: any) {
                     ? <div className={'create-card_void-div'}></div>
                     :
                     <Button
+                        id={'cy_create-players-btn_sortear-ordem'}
                         onClick={(event) => handleSortearOrdem(event)}
                         disabled={players.length < 3}
                     >
@@ -88,6 +89,7 @@ export function CreateCard({ players, setPlayers, qtdPlayers }: any) {
                 }
 
                 <Button
+                    id={'cy_create-players-btn_jogar'}
                     onClick={(event) => handleStart(event)}
                     disabled={qtdPlayers === 'um-jogador' ? players.length === 0 : players.length < 3}
                 >
