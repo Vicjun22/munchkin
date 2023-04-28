@@ -1,5 +1,5 @@
 .cac_current-player {
-    width: 40%;
+    width: 60%;
     height: 50%;
 
     font-size: large;
@@ -14,7 +14,7 @@
         justify-content: space-between;
 
         .cac_current-player-info {
-            width: 40%;
+            width: 30%;
             height: 100%;
             padding: 20px 10px 10px;
 
@@ -75,7 +75,7 @@
         }
 
         .cac_current-player-custom {
-            width: 58%;
+            width: 65%;
             height: 100%;
 
             display: flex;
@@ -85,6 +85,84 @@
 
             border: 10px solid #4C1A11;
             background: #ECC6A7;
+
+            .cac_current-player-custom_nivel-genero {
+                width: 100%;
+                height: 10%;
+
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+
+                .cac_current-player-custom_nivel {
+                    width: 40%;
+                    height: 100%;
+    
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+
+                    .cac_current-player-custom_nivel-btn {
+                        width: 20%;
+                        height: 100%;
+
+                        color: #ECC6A7;
+                        font-size: larger;
+
+                        cursor: pointer;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        border: none;
+                        background: #4C1A11;
+                    }
+
+                    .cac_current-player-custom_nivel-btn:hover {
+                        filter: brightness(0.8);
+                    }
+
+                    .cac_current-player-custom_nivel-btn:active {
+                        filter: brightness(0.6);
+                    }
+                }
+
+                .cac_current-player-custom_genero {
+                    width: 50%;
+                    height: 100%;
+    
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+
+                    button {
+                        width: 90%;
+                        height: 100%;
+
+                        color: #ECC6A7;
+                        font-size: large;
+
+                        cursor: pointer;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        border: none;
+                        background: #4C1A11;
+                    }
+
+                    button:hover {
+                        filter: brightness(0.8);
+                    }
+
+                    button:active {
+                        filter: brightness(0.6);
+                    }
+                }
+            }
+
         }
     }
 }

@@ -21,7 +21,12 @@ export function GameScreen({ qtdPlayers, players, setPlayers, gameStorage }: any
 
     return (
         <section className={'section_game'}>
-            <CompleteAttributesCard player={playerAtual} setOrdemAtual={setOrdemAtual} />
+            <CompleteAttributesCard
+                player={playerAtual}
+                players={players}
+                setPlayers={setPlayers}
+                setOrdemAtual={setOrdemAtual}
+            />
         </section>
     )
 }
