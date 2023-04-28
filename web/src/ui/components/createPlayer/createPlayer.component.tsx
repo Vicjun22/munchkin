@@ -27,6 +27,7 @@ export function CreatePlayer({ players, setPlayers, qtdPlayers, setOpenModal }: 
                 , ordem: players.length
                 , duasRacas: false
                 , raca1: 'Humano'
+                , racaGenero: 'Humano-' + genero
             };
             setPlayers([...players, newPlayer]);
             setNomeJogador('');

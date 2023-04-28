@@ -23,4 +23,5 @@ export interface PlayerType {
     montaria?: number;
 
     bonusTemporario?: number;
+    racaGenero?: string;
 }
