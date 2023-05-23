@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { ROUTES } from '../../../constants';
-import { Title } from '../../components';
+import { ExitButton, Title } from '../../components';
 import { PlayerType } from '../../../types';
 
 import HumanF from '../../../assets/images/munchkin_human-female.svg'
@@ -41,6 +41,8 @@ export function GameScreen({ qtdPlayers, players, setPlayers, gameStorage }: any
                         alt={'Imagem do jogador'}
                         className={'section_game_img'}
                     />
+
+                    <h1>Poder: <span>50</span></h1>
                 </div>
 
                 <div className={'section_game_data-div'}>
