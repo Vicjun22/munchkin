@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { ROUTES } from '../../../constants';
-import { ExitButton, Title } from '../../components';
+import { Title } from '../../components';
 import { PlayerType } from '../../../types';
 
 import HumanF from '../../../assets/images/munchkin_human-female.svg'
