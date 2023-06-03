@@ -90,7 +90,7 @@ export function CompleteAttributesCard({player, players, setPlayers, setOrdemAtu
                             <button
                                 onClick={(event) => handleMudancaDeSexo(event)}
                             >
-                                Mudança de Sexo ⚥
+                                Mudança de Sexo
                             </button>
                         </div>
                     </div>
